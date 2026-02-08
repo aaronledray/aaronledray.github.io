@@ -1,0 +1,60 @@
+{%- comment -%}
+USAGE:
+
+{% include art_image.html
+  src='/assets/images/art1.png'
+  alt='Self-assembly — ink on paper, 2022'
+  caption='“Self-assembly” — ink on paper, 2022'
+  width='60%'         # '480' (px) or '60%' (percent)
+  maxwidth='900'      # number (px)
+  align='center'      # left|center|right
+  link='true'         # wrap image in <a>
+  rounded='true'      # rounded corners
+  shadow='true'       # drop shadow
+  border='false'      # 1px border
+%}
+{%- endcomment -%}
+
+{%- assign _src      = include.src      | default: '' -%}
+{%- assign _alt      = include.alt      | default: '' -%}
+{%- assign _caption  = include.caption  | default: '' -%}
+{%- assign _width    = include.width    | default: '' -%}
+{%- assign _maxwidth = include.maxwidth | default: '' -%}
+{%- assign _align    = include.align    | default: 'left' -%}
+{%- assign _link     = include.link     | default: '' -%}
+{%- assign _rounded  = include.rounded  | default: '' -%}
+{%- assign _shadow   = include.shadow   | default: '' -%}
+{%- assign _border   = include.border   | default: '' -%}
+
+{%- comment -%} Build class list {%- endcomment -%}
+{%- assign classes = 'art-img' -%}
+{%- if _rounded %}{% assign classes = classes | append: ' art-rounded' %}{% endif -%}
+{%- if _shadow  %}{% assign classes = classes | append: ' art-shadow'  %}{% endif -%}
+{%- if _border  %}{% assign classes = classes | append: ' art-border'  %}{% endif -%}
+
+{%- comment -%} Build style attribute {%- endcomment -%}
+{%- assign style_attr = '' -%}
+{%- if _width != '' -%}
+  {%- assign style_attr = style_attr | append: 'width:' | append: _width -%}
+  {%- unless _width contains '%' -%}{% assign style_attr = style_attr | append: 'px' %}{%- endunless -%}
+  {%- assign style_attr = style_attr | append: ';height:auto;' -%}
+{%- endif -%}
+{%- if _maxwidth != '' -%}
+  {%- assign style_attr = style_attr | append: 'max-width:' | append: _maxwidth | append: 'px;' -%}
+{%- endif -%}
+
+<figure class="art-figure art-{{ _align }}">
+  {%- if _link %}<a href="{{ _src }}">{%- endif -%}
+  <img
+    src="{{ _src }}"
+    alt="{{ _alt }}"
+    loading="lazy"
+    decoding="async"
+    class="{{ classes }}"
+    style="{{ style_attr }}"
+  />
+  {%- if _link %}</a>{%- endif -%}
+  {%- if _caption != '' -%}
+    <figcaption class="art-caption">{{ _caption }}</figcaption>
+  {%- endif -%}
+</figure>

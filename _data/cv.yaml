@@ -1,0 +1,161 @@
+name: Aaron P. Ledray
+title: "Biochemisty at the Experiment–Theory–Simulation Interface"
+email: aaronledray@gmail.com
+website: https://aaronledray.github.io/
+linkedin: "https://www.linkedin.com/in/aaronledray"
+orcid: "0000-0002-1829-1235"              
+location: Austin, TX, USA
+
+
+
+
+summary: >
+  Metallobiochemist working at the experiment–theory–simulation interface, with research spanning protein design,
+  enzyme mechanisms, and single-atom–resolution spectroscopy. Experienced in integrating spectroscopy,
+  computation, and molecular biology to resolve metal-centered reactivity in biological systems
+  and to design functional metalloproteins.
+
+education:
+  - degree: Doctor of Philosophy – Molecular Biology and Biochemistry
+    institution: University of California, Irvine
+    location: Irvine, California, USA
+    year: 2021
+    thesis: "Understanding Ferryl Basicity and Proximal Histidine Ligation"
+
+  - degree: Bachelor of Science – double major in Biotechnology and Biomedical Sciences, minors in Chemistry and Music
+    institution: University of Central Florida
+    location: Orlando, Florida, USA
+    year: 2015
+    thesis: "Characterizing the onset and progression of Charcot-Marie-Tooth Neuropathy in H304R Mutant Mice"
+
+additional_courses_and_workshops:
+  - "UT Austin Applied Parallel Programming Workshop (2023)"
+  - "UT Austin Machine Learning Workshop (2022)"
+  - "SSRL EXAFS Summer School (2016)"
+  - "Genetic Code Expansion Workshop (2016)"
+
+conferences_and_presentations:
+  - "Gordon Research Conference – Metals in Biology (2019, 2025)"
+  - "Gordon Research Seminar – Bioinorganic Chemistry (2019, 2020)"
+  - "Texas Advanced Computing Center User Meeting (2023)"
+  - "Invited speaker, University of Central Florida, Industrial Perspectives in Biotechnology (2023)"
+  - "Guest lecturer, University of Texas at Austin, Bioinorganic Chemistry (P450 catalysis, 2022)"
+  - "Southern California Bioinorganic Symposium, poster (2017), talk (2018)"
+  - "UC Irvine Departmental Seminar Retreat, Molecular Biology & Biochemistry, talk (2019)"
+  - "UC Irvine Research Showcase, Molecular Biology & Biochemistry, poster (2016–2021)"
+  - "American Society of Cell Biology Annual Meeting, poster (2013, 2014)"
+
+experience:
+  - title: Postdoctoral Research Fellow
+    institution: University of Texas at Austin
+    location: Austin, TX, USA
+    years: 2021–present
+    lab: Laboratory of Dr. Yi Lu – green biochemistry and enzyme design
+    highlights:
+      - "Simulated O₂ binding across several hundred heme protein homologues; applied machine-learning voxel representations to predict enzyme reactivity and metal binding in designed structures. Presented at the Texas Advanced Computing Center User Meeting (2023)."
+      - "Designed novel metallo-DNAzymes that mimic heme peroxidase enzymes."
+      - "Developed and characterized next-generation model systems for heme–copper oxidase, sulfite reductase (types A and D), and nitrogenase."
+      - "Engineered DNA-aptamer–based delivery systems for fluorescent cargo across blood–brain barrier model systems."
+
+  - title: Graduate Research Assistant
+    institution: University of California, Irvine
+    location: Irvine, CA, USA
+    years: 2015–2021
+    lab: Laboratory of Dr. Michael T. Green – heme enzyme reactivity
+    highlights:
+      - "Established that peroxidase Compound II is an unprotonated Fe(IV)=O species using a multi-spectroscopic approach, resolving a long-standing mechanistic debate."
+      - "Simulated NRVS spectra of heme enzyme intermediates to validate experimental assignments."
+      - "Reprocessed neutron crystallography datasets using electron diffraction maps, identifying sample-damage artifacts responsible for conflicting literature interpretations."
+
+  - title: Undergraduate Research Assistant
+    institution: University of Central Florida
+    location: Orlando, FL, USA
+    years: 2013–2015
+    lab: Laboratory of Dr. Stephen J. King – neurodegenerative disease models
+    highlights:
+      - "Behavioral studies in a novel mouse model of Charcot–Marie–Tooth neuropathy, including statistical analysis and scripting."
+      - "3D confocal microscopy and quantitative morphology analysis of murine neuromuscular junctions."
+      - "Kymograph analysis of fluorescent endosome trafficking in neuronal cell lines."
+
+skills:
+  - category: Biochemistry & Enzymology
+    items:
+      - Protein engineering
+      - Enzyme kinetics and mechanisms
+      - Structural biology
+      - Bioinorganic and metalloprotein chemistry
+
+  - category: Spectroscopy
+    items:
+      - UV/Vis spectroscopy
+      - Mössbauer spectroscopy
+      - Resonance Raman spectroscopy
+      - X-ray Absorption Spectroscopy (XAS), Extended X-ray Absorption Fine Structure (EXAFS)
+      - Nuclear Resonance Vibrational Spectroscopy (NRVS)
+
+  - category: Molecular & Cell Biology
+    items:
+      - Molecular cloning and construct design
+      - Protein expression and purification in bacterial and eukaryotic systems
+
+  - category: Computational Chemistry & Molecular Modeling
+    items:
+      - Protein homology modeling and molecular docking
+      - Molecular dynamics simulations (free energy calculations, macromolecular interactions, active-site dynamics)
+      - Quantum chemistry and hybrid QM/MM methods
+      - Protein design and modeling (Rosetta, RFdiffusion, ESMFold, AlphaFold)
+
+  - category: Bioinformatics & Data Science
+    items:
+      - Machine learning applied to protein structural data
+      - Feature engineering, regression, and classification analyses
+      - Python-based modeling pipelines (scikit-learn, PyTorch, TensorFlow)
+
+  - category: Scientific Visualization & Graphic Design
+    items:
+      - Design of publication-quality scientific figures and data visualizations
+      - Custom plotting and interactive graphics (matplotlib, Plotly)
+      - Vector illustration and layout for journals and presentations (Adobe Illustrator, InDesign)
+
+languages:
+  - name: Python
+    since: 2013
+    focus: Scientific computing, data analysis, visualization
+  - name: R
+    since: 2015
+    focus: Statistical analysis and sequencing data
+  - name: Bash
+    since: 2016
+    focus: Scripting and HPC job management
+  - name: Fortran
+    since: 2021
+    focus: Spectroscopic data processing and analysis
+  - name: Ruby
+    since: 2023
+    focus: Basic exposure (Jekyll/GitHub Pages, creative computing)
+
+accomplishments:
+  - "Cover art for *Journal of the American Chemical Society*, Volume 142, Issue 48 (2020)"
+  - "Graduated B.S. with honors and defended original undergraduate thesis"
+  - "Undergraduate Travel Award, American Society of Cell Biology Annual Meeting (2013)"
+  - "Founder of the UCF Synthetic Biology Club"
+
+organizations:
+  - name: American Chemical Society
+    role: Member
+    years: 2012–present
+
+  - name: UCF Synthetic Biology Club
+    role: Founding Member, President
+    years: 2013–2015
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+- name: Interactive Coordination Fingerprint
+  url: /InteractiveCoordinationFingerprint.html
+  description: "Explore ligand environments and visualize coordination fingerprints for metal-binding sites."
+
+
+- name: Journal Club Publication Watcher
+  url: https://github.com/aaronledray/Journal_Club_Publication_Watcher
+  description: "Checks for keywords-of-interest in journals-of-interest within date range. Also authors-of-interest. Outputs powerpoint, txt, and html dashboard."
+
+
+
+
+
+#- name: Proton-Coupled Electron Transfer Mapper
+#  url: /pcet-tool.html
+#  description: "Visualize and analyze PCET energy landscapes."
