@@ -1,5 +1,5 @@
 name: Aaron P. Ledray
-title: "Biochemisty at the Experiment–Theory–Simulation Interface"
+title: "Biochemistry at the Experiment–Theory–Simulation Interface"
 email: aaronledray@gmail.com
 website: https://aaronledray.github.io/
 linkedin: "https://www.linkedin.com/in/aaronledray"
@@ -32,7 +32,7 @@ additional_courses_and_workshops:
   - "UT Austin Applied Parallel Programming Workshop (2023)"
   - "UT Austin Machine Learning Workshop (2022)"
   - "SSRL EXAFS Summer School (2016)"
-  - "Genetic Code Expansion Workshop (2016)"
+  - "Genetic Code Expansion Workshop, Oregon State University (2016)"
 
 conferences_and_presentations:
   - "Gordon Research Conference – Metals in Biology (2019, 2025)"
@@ -56,6 +56,9 @@ experience:
       - "Designed novel metallo-DNAzymes that mimic heme peroxidase enzymes."
       - "Developed and characterized next-generation model systems for heme–copper oxidase, sulfite reductase (types A and D), and nitrogenase."
       - "Engineered DNA-aptamer–based delivery systems for fluorescent cargo across blood–brain barrier model systems."
+      - "Designed kinetic experiments to resolve competing pathways and extract rate behavior."
+      - "Built Python-based workflows for processing, modeling, and comparing experimental datasets."
+      - "Refined reaction conditions and assay parameters to improve robustness and reproducibility."
 
   - title: Graduate Research Assistant
     institution: University of California, Irvine
@@ -75,9 +78,40 @@ experience:
     highlights:
       - "Behavioral studies in a novel mouse model of Charcot–Marie–Tooth neuropathy, including statistical analysis and scripting."
       - "3D confocal microscopy and quantitative morphology analysis of murine neuromuscular junctions."
-      - "Kymograph analysis of fluorescent endosome trafficking in neuronal cell lines."
+      - "Developed fluorescence-based assays to quantify intracellular transport and trafficking in neuronal systems."
+      - "Performed quantitative imaging and MATLAB-based analysis of cellular distribution and dynamics."
+      - "Conducted dose-response experiments to evaluate toxicity and transport behavior of small molecules."
 
 skills:
+  - category: Assay Development & Experimental Systems
+    items:
+      - Design and optimization of biochemical and cell-based assays
+      - Fluorescence-based readouts for transport, uptake, and reaction systems
+      - Signal optimization, reproducibility, and endpoint selection
+
+  - category: Reaction Systems & Enzymology
+    items:
+      - Oxygen reduction and sulfite reduction reaction systems
+      - Redox chemistry, reaction kinetics, and competing pathway analysis
+      - Control of reaction conditions and intermediate behavior
+
+  - category: Cell-Based & Imaging Systems
+    items:
+      - Fluorescent cargo uptake and intracellular trafficking assays
+      - Human cell lines and primary neurons
+      - Quantitative fluorescence microscopy and image analysis
+
+  - category: Data Analysis & Modeling
+    items:
+      - Python (pandas, scikit-learn), kinetic modeling, statistical analysis
+      - Custom pipelines for processing and interpreting experimental datasets
+      - Visualization and structured data outputs
+
+  - category: Experimental Design & Optimization
+    items:
+      - Protocol development, troubleshooting, and QC workflows
+      - Assay performance tuning in complex, interference-prone systems
+
   - category: Biochemistry & Enzymology
     items:
       - Protein engineering
@@ -109,7 +143,7 @@ skills:
     items:
       - Machine learning applied to protein structural data
       - Feature engineering, regression, and classification analyses
-      - Python-based modeling pipelines (scikit-learn, PyTorch, TensorFlow)
+      - Machine-learning pipelines (scikit-learn, PyTorch, TensorFlow)
 
   - category: Scientific Visualization & Graphic Design
     items:
@@ -121,6 +155,9 @@ languages:
   - name: Python
     since: 2013
     focus: Scientific computing, data analysis, visualization
+  - name: MATLAB
+    since: 2013
+    focus: Quantitative analysis, scripting, and imaging workflows
   - name: R
     since: 2015
     focus: Statistical analysis and sequencing data
@@ -134,6 +171,20 @@ languages:
     since: 2023
     focus: Basic exposure (Jekyll/GitHub Pages, creative computing)
 
+tooling:
+  - name: Spyder IDE
+    since: 2013
+    focus: Scientific Python development and debugging
+  - name: HPC systems
+    since: 2016
+    focus: Cluster-based compute workflows and job scheduling
+  - name: RStudio
+    since: 2025
+    focus: R development environment and project workflows
+  - name: VS Code
+    since: 2021
+    focus: Multi-language development and project tooling
+
 accomplishments:
   - "Cover art for *Journal of the American Chemical Society*, Volume 142, Issue 48 (2020)"
   - "Graduated B.S. with honors and defended original undergraduate thesis"
@@ -141,19 +192,21 @@ accomplishments:
   - "Founder of the UCF Synthetic Biology Club"
 
 organizations:
+  - name: BioML Club, University of Texas at Austin
+    role: Founding Member
+    years: 2022–2025
+
   - name: American Chemical Society
     role: Member
     years: 2012–present
 
+  - name: American Society of Microbiology
+    role: Member; Vice President, UCF chapter
+    years: 2012–2015
+
   - name: UCF Synthetic Biology Club
     role: Founding Member, President
     years: 2013–2015
-
-
-
-
-
-
 
 
 

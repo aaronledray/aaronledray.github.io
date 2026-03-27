@@ -61,7 +61,7 @@ permalink: /cv/
 
 ---
 
-## Languages & Tooling
+## Languages
 {% if site.data.cv.languages %}
 <ul>
 {% for lang in site.data.cv.languages %}
@@ -74,13 +74,26 @@ permalink: /cv/
 </ul>
 {% endif %}
 
+## Tools & Platforms
+{% if site.data.cv.tooling %}
+<ul>
+{% for tool in site.data.cv.tooling %}
+  <li>
+    <strong>{{ tool.name }}</strong>
+    {% if tool.since %}(since {{ tool.since }}){% endif %}
+    {% if tool.focus %} — {{ tool.focus }}{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
+
 ---
 
 ## Accomplishments
 {% if site.data.cv.accomplishments %}
 <ul>
 {% for a in site.data.cv.accomplishments %}
-  <li>{{ a }}</li>
+  <li>{{ a | markdownify | remove: '<p>' | remove: '</p>' }}</li>
 {% endfor %}
 </ul>
 {% endif %}
@@ -115,3 +128,7 @@ permalink: /cv/
 {% endfor %}
 </ul>
 {% endif %}
+
+---
+
+[View Publications](/publications/)
