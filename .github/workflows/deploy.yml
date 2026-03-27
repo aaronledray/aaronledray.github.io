@@ -80,8 +80,12 @@ jobs:
           bundle exec jekyll build --lsi
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          if [ -f purgecss.config.js ]; then
+            npm install -g purgecss
+            purgecss -c purgecss.config.js
+          else
+            echo "Skipping PurgeCSS: purgecss.config.js not found."
+          fi
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

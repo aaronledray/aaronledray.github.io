@@ -36,8 +36,12 @@ jobs:
           bundle exec jekyll build --lsi
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          if [ -f purgecss.config.js ]; then
+            npm install -g purgecss
+            purgecss -c purgecss.config.js
+          else
+            echo "Skipping PurgeCSS: purgecss.config.js not found."
+          fi
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:
