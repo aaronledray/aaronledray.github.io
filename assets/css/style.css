@@ -1,0 +1,62 @@
+/* Light defaults */
+:root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --link: #0b5fff;
+    --nav-bg: #f4f4f4;
+    --border: #e6e6e6;
+    --button-fg: #000000;
+  }
+  
+  /* Dark overrides */
+  html[data-theme="dark"] {
+    --bg: #0e0e0f;
+    --fg: #e8e8ea;
+    --link: #7aa2ff;
+    --nav-bg: #1a1a1b;
+    --border: #2a2a2c;
+    --button-fg: #ffffff; /* ensures button text stays visible */
+  }
+  
+  /* Apply variables site-wide */
+  html, body { background: var(--bg); color: var(--fg); }
+  
+  /* Headers / titles */
+  h1, h2, h3, h4, h5, h6 { color: var(--fg); }
+  
+  /* Links (site + nav + posts) */
+  a, .post-link, nav a { color: var(--link); }
+  
+  /* Header / nav / footer bars */
+  .site-header, .site-nav, nav { 
+    background: var(--nav-bg); 
+    border-bottom: 1px solid var(--border); 
+  }
+  .site-footer { 
+    background: var(--nav-bg); 
+    border-top: 1px solid var(--border);
+    color: var(--fg);
+  }
+  
+  /* Page wrappers */
+  .page, .page-content, .post, .post-content, .post-list > li, .content {
+    background: var(--bg);
+    color: var(--fg);
+    border-color: var(--border);
+  }
+  
+  /* UI */
+  hr, .divider { border-color: var(--border); }
+  blockquote { color: var(--fg); border-left: 4px solid var(--border); }
+  code, pre { background: rgba(127,127,127,.08); color: var(--fg); border: 1px solid var(--border); }
+  
+  /* Theme toggle button */
+  #themeToggle {
+    color: var(--button-fg);
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  

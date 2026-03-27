@@ -14,7 +14,7 @@
     </script>
 
     <meta charset="UTF-8">
-    <title>Posts</title>
+    <title>Contact Information</title>
     <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
 
@@ -183,17 +183,44 @@
 </nav>
 
     <div class="content">
-      <h1>Posts</h1>
+      <article class="post">
 
-<ul>
-  
-    <li>
-      <a href="/cofactors/enzymes/coordination-networks/2026/01/30/JournalClubLookupTool.html">Journal Club Publication Watcher</a>
-      <small>— Jan 30, 2026</small>
-    </li>
-  
-</ul>
+  <header class="post-header">
+    <h1 class="post-title">Contact Information</h1>
+  </header>
 
+  <div class="post-content">
+    <hr />
+
+<h2 id="lets-talk">Let’s Talk!</h2>
+
+<!-- Obfuscated emails -->
+<p>Email: <span id="email1"></span></p>
+
+<hr />
+
+<p><a href="https://aaronledray.github.io/">Website</a><br />
+<a href="https://www.linkedin.com/in/aaronledray">LinkedIn</a><br />
+<a href="https://scholar.google.com/citations?user=zpRylnEAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a><br />
+<a href="https://orcid.org/0000-0002-1829-1235">ORCID</a><br />
+<a href="https://github.com/aaronledray">GitHub</a></p>
+
+<hr />
+
+<p>You can also find me at UT Austin in the <a href="https://cm.utexas.edu/faculty/yi-lu">Lu Lab</a>.</p>
+
+<script>
+  // Simple obfuscation for emails
+  const e1 = ['aaronledray','gmail.com'].join('@');
+  const e2 = ['aledray','utexas.edu'].join('@');
+  document.getElementById('email1').textContent = e1;
+  document.getElementById('email2').textContent = e2;
+</script>
+
+
+  </div>
+
+</article>
 
     </div>
 

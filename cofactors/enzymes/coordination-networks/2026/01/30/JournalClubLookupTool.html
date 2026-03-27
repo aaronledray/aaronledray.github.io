@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Boot theme BEFORE CSS to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved ? saved : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Journal Club Publication Watcher</title>
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+
+
+
+
+<!-- <style>
+  body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.7;
+    font-size: 18px;
+    background: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, nav a {
+    font-family: 'Lato', sans-serif;
+  }
+
+  nav {
+    background: #f8f8f8;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 1em;
+    font-weight: 700;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
+  }
+</style> -->
+
+<head>
+
+  <script>
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+      localStorage.setItem('theme', mode);
+    }
+  
+    function toggleTheme() {
+      const current = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+  
+    // On load, apply saved theme
+    (function () {
+      const saved = localStorage.getItem('theme') || 'light';
+      setTheme(saved);
+    })();
+  </script>
+  
+
+</head>
+
+
+
+<style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --link-color: #0066cc;
+      --nav-bg: #f8f8f8;
+      --nav-text: #1a1a1a;
+    }
+  
+    body.dark-mode {
+      --bg-color: #111111;
+      --text-color: #e5e5e5;
+      --link-color: #66aaff;
+      --nav-bg: #1f1f1f;
+      --nav-text: #e5e5e5;
+    }
+  
+
+
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Garamond", "EB Garamond", Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+  
+    a {
+      color: var(--link-color);
+    }
+  
+    nav {
+      background: var(--nav-bg);
+      padding: 1em;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    nav a {
+      color: var(--nav-text);
+      text-decoration: none;
+      margin-right: 1em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+    }
+  
+    .theme-toggle {
+      float: right;
+      font-size: 0.9em;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--nav-text);
+      padding: 0.3em 0.6em;
+      border-radius: 4px;
+      color: var(--nav-text);
+    }
+  
+    .theme-toggle:hover {
+      background-color: var(--link-color);
+      color: #fff;
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1774634913">
+
+  
+  </head>
+  <body>
+    
+
+
+<nav>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌓 Dark/Light Toggle</button>
+    <a href="/">Home</a>
+    <a href="/cv/">CV</a>
+    <a href="/publications/">Publications</a>
+    <a href="/blog/">Posts</a>
+    <a href="/tools/">Tools</a>
+    <!-- <a href="/portfolio/">Art</a> -->
+    <a href="/contact/">Contact</a>
+</nav>
+
+    <div class="content">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Journal Club Publication Watcher</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-30T07:21:37+00:00" itemprop="datePublished">Jan 30, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>TL;DR:</strong> I built a Python tool that searches PubMed and CrossRef weekly, finds papers matching your keywords and tracked authors, and generates a PowerPoint presentation + interactive HTML dashboard for easy review. The PowerPoint presentation is because PIs often like to flip through slides.</p>
+
+<hr />
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Staying current with literature in your field is a constant battle and it doesn’t get taught (at least not to me)! Email alerts don’t work for me, and I wasn’t satisfied with any other tool I found.</p>
+
+<p>For the journal club during my postdoctoral stage (~30 people), we needed a better system. Something that could:</p>
+
+<ul>
+  <li>Track specific authors by ORCID</li>
+  <li>Search specific keywords i.e. fields</li>
+  <li>Filter by relevant journals</li>
+  <li>Generate outputs that work for group discussion</li>
+</ul>
+
+<h2 id="a-solution">A Solution</h2>
+
+<p><strong>Journal Club Publication Watcher</strong> is a command-line tool that automates the entire literature discovery workflow:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python main.py <span class="nt">--auto</span> <span class="nt">--mode</span> both
+
+</code></pre></div></div>
+
+<p>Then:</p>
+
+<ol>
+  <li>
+    <p>Searches PubMed by your configured keywords</p>
+  </li>
+  <li>
+    <p>Searches CrossRef by your tracked authors’ ORCIDs</p>
+  </li>
+  <li>
+    <p>Deduplicates results across sources</p>
+  </li>
+  <li>
+    <p>Generates four output formats:</p>
+  </li>
+</ol>
+
+<ul>
+  <li>
+    <p><strong>PowerPoint</strong> - One slide per paper for visual review</p>
+  </li>
+  <li>
+    <p><strong>HTML Dashboard</strong> - Interactive, sortable table with dark mode</p>
+  </li>
+  <li>
+    <p><strong>Text Summary</strong> - Human-readable report with statistics</p>
+  </li>
+  <li>
+    <p><strong>JSON Export</strong> - Machine-readable for further processing</p>
+  </li>
+</ul>
+
+<h2 id="key-features">Key Features</h2>
+
+<h3 id="multi-source-search">Multi-Source Search</h3>
+
+<p>The tool queries both <strong>PubMed</strong> (via Biopython’s Entrez API) and <strong>CrossRef</strong> (via REST API). This dual-source approach catches papers that might only be indexed in one database and allows tracking authors by ORCID regardless of name variations.</p>
+
+<h3 id="flexible-configuration">Flexible Configuration</h3>
+
+<p>Everything is configured via simple YAML files:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># keywords.yaml</span>
+
+<span class="na">topics</span><span class="pi">:</span>
+
+<span class="pi">-</span> <span class="s">machine learning pathology</span>
+
+<span class="pi">-</span> <span class="s">digital pathology</span>
+
+<span class="pi">-</span> <span class="s">computational histology</span>
+
+  
+
+<span class="c1"># authors.yaml</span>
+
+<span class="na">authors</span><span class="pi">:</span>
+
+<span class="pi">-</span> <span class="s">0000-0001-2345-6789</span> <span class="c1"># Jane Smith</span>
+
+<span class="pi">-</span> <span class="s">0000-0002-3456-7890</span> <span class="c1"># John Doe</span>
+
+</code></pre></div></div>
+
+<h3 id="smart-date-handling">Smart Date Handling</h3>
+
+<p>Configure a lookup frequency like “1 week” or “2 months” and the tool automatically calculates the date range. Or run interactively to specify custom dates.</p>
+
+<h3 id="multiple-output-formats">Multiple Output Formats</h3>
+
+<p>The PowerPoint generation creates presentation-ready slides with abstracts, author lists, and DOI links. The HTML dashboard uses DataTables for sorting/filtering and includes a dark mode toggle for late-night literature reviews. Additional feature to open each publication found in Safari such that graphical abstracts can be copied over manually into the Powerpoint presentation.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ol>
+  <li>
+    <p>Clone the repository</p>
+  </li>
+  <li>
+    <p>Install dependencies: <code class="language-plaintext highlighter-rouge">pip install -r requirements.txt</code></p>
+  </li>
+  <li>
+    <p>Copy sample configs and customize:</p>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">cp </span>config/<span class="k">*</span>.sample.yaml config/
+
+<span class="c"># Edit meta.yaml with your email (required for PubMed)</span>
+
+<span class="c"># Edit keywords.yaml with your search terms</span>
+
+<span class="c"># Edit authors.yaml with ORCIDs to track</span>
+
+</code></pre></div></div>
+
+<ol>
+  <li>Run: <code class="language-plaintext highlighter-rouge">python main.py</code></li>
+</ol>
+
+<h2 id="whats-new-in-v370">What’s New in v3.7.0</h2>
+
+<p>This release focuses on code cleanup and consistency:</p>
+<ul>
+  <li>Removed legacy duplicate code</li>
+  <li>Synchronized version numbers across modules</li>
+  <li>Cleaned up commented-out code blocks</li>
+</ul>
+
+<h2 id="future-ideas">Future Ideas</h2>
+
+<ul>
+  <li>Add support for more databases (Semantic Scholar, arXiv)</li>
+  <li>Email/Slack notifications for new papers</li>
+  <li>Web interface</li>
+  <li>Integration with reference managers (Zotero most likely)</li>
+  <li>Pulling the graphical abstract from each publication</li>
+</ul>
+
+<hr />
+
+<p><strong>GitHub:</strong> <a href="https://github.com/aaronledray/Journal_Club_Publication_Watcher">Journal_Club_Publication_Watcher</a></p>
+
+<p><em>Built with Python, Biopython, python-pptx, and requests. Open source under GPL v3 license.</em></p>
+
+<hr />
+
+
+  </div><a class="u-url" href="/cofactors/enzymes/coordination-networks/2026/01/30/JournalClubLookupTool.html" hidden></a>
+</article>
+
+    </div>
+
+    <!-- Toggle + button state sync -->
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+          btn.setAttribute('aria-pressed', theme === 'dark');
+          btn.textContent = theme === 'dark' ? 'Dark mode' : 'Light mode';
+        }
+      }
+
+      function toggleTheme() {
+        var current = document.documentElement.getAttribute('data-theme') || 'light';
+        setTheme(current === 'dark' ? 'light' : 'dark');
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        var current = document.documentElement.getAttribute('data-theme') || 'light';
+        btn.setAttribute('aria-pressed', current === 'dark');
+        btn.textContent = current === 'dark' ? 'Dark mode' : 'Light mode';
+      });
+    </script>
+  </body>
+</html>
