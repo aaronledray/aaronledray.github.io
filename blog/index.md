@@ -3,7 +3,8 @@ layout: default
 title: Posts
 permalink: /blog/
 ---
-<h1>Posts</h1>
+<h1 style="text-align: center;">Posts</h1>
+<hr>
 
 <ul>
   {% for post in site.posts %}

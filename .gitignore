@@ -5,3 +5,8 @@ _site
 vendor
 
 .DS_Store
+
+# Large source encodes for the cytochrome c oxidase post
+assets/videos/20260708_heme-copper-oxidase_heatmap.mp4
+assets/videos/20260708_heme-copper-oxidase_heatmap_playable.mp4
+assets/videos/20260708_heme-copper-oxidase_heatmap.web.mp4
