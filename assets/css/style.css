@@ -51,7 +51,7 @@
   code, pre { background: rgba(127,127,127,.08); color: var(--fg); border: 1px solid var(--border); }
   
   /* Theme toggle button */
-  #themeToggle {
+#themeToggle {
     color: var(--button-fg);
     background: none;
     border: 1px solid var(--border);
@@ -59,4 +59,37 @@
     border-radius: 6px;
     cursor: pointer;
   }
+
+/* Portfolio art cards */
+.art-figure {
+  margin: 1rem 0;
+}
+
+.art-figure.art-center {
+  text-align: center;
+}
+
+.art-img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.art-rounded {
+  border-radius: 12px;
+}
+
+.art-shadow {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.art-border {
+  border: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.art-caption {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 0.4rem;
+}
   

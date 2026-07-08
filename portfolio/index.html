@@ -18,77 +18,6 @@
     <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
 
-
-
-
-<!-- <style>
-  body {
-    font-family: 'Merriweather', serif;
-    line-height: 1.7;
-    font-size: 18px;
-    background: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-
-  h1, h2, h3, nav a {
-    font-family: 'Lato', sans-serif;
-  }
-
-  nav {
-    background: #f8f8f8;
-    padding: 1em;
-    border-bottom: 1px solid #ddd;
-  }
-
-  nav a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 1em;
-    font-weight: 700;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 2em;
-  }
-</style> -->
-
-<head>
-
-  <script>
-    function setTheme(mode) {
-      if (mode === 'dark') {
-        document.body.classList.add('dark-mode');
-      } else {
-        document.body.classList.remove('dark-mode');
-      }
-      localStorage.setItem('theme', mode);
-    }
-  
-    function toggleTheme() {
-      const current = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    }
-  
-    // On load, apply saved theme
-    (function () {
-      const saved = localStorage.getItem('theme') || 'light';
-      setTheme(saved);
-    })();
-  </script>
-  
-
-</head>
-
-
-
 <style>
     :root {
       --bg-color: #ffffff;
@@ -98,7 +27,7 @@
       --nav-text: #1a1a1a;
     }
   
-    body.dark-mode {
+    html[data-theme="dark"] {
       --bg-color: #111111;
       --text-color: #e5e5e5;
       --link-color: #66aaff;
@@ -163,9 +92,8 @@
       color: #fff;
     }
   </style>
-  <link rel="stylesheet" href="/assets/css/style.css?v=1774634913">
+<link rel="stylesheet" href="/assets/css/style.css?v=1783545487">
 
-  
   </head>
   <body>
     
@@ -183,38 +111,26 @@
 </nav>
 
     <div class="content">
-      <article class="post">
+      <h1 id="art-stuff">Art Stuff</h1>
 
-  <header class="post-header">
-    <h1 class="post-title">Art Stuff</h1>
-  </header>
-
-  <div class="post-content">
-    <hr />
-
-<h4 id="its-not-just-science-man">It’s not just science, man!</h4>
+<h4 id="its-not-just-science-man">It’s not just science, man.</h4>
 
 <p>But sometimes it is science.</p>
 
-<hr />
+<figure class="art-figure art-center">
+  <img class="art-img art-rounded art-border art-shadow" src="/assets/images/art1.png" alt="Sketch 1" width="400" />
+  <figcaption class="art-caption">"It's a cloud management program" - 2025</figcaption>
+</figure>
 
-<p><img src="/assets/images/art1.png" alt="Sketch 1" style="width:400px; height:auto;              border:1px solid #ccc;        /* add border */             border-radius:12px;           /* rounded corners */             box-shadow:0 4px 12px rgba(0,0,0,.15); /* drop shadow */      " /></p>
+<p>It’s not that silly of a name for software, considering the rest of the landscape these days.</p>
 
-<p><em>“It’s a cloud management program” — 2025</em></p>
+<figure class="art-figure art-center">
+  <img class="art-img art-rounded art-border art-shadow" src="/assets/images/ACS_JournalCover.png" alt="ACS Cover" width="400" />
+  <figcaption class="art-caption">"Is it Fe=O? Fe-OH?" - 2020</figcaption>
+</figure>
 
-<p>It’s not THAT silly of a name for Software, considering the rest of the landscape in now-a-days.</p>
+<p>Cover art for my dissertation publication. Thanks, MTG, for being such a supportive advisor and encouraging me to see the art in my work.</p>
 
-<hr />
-
-<p><img src="/assets/images/ACS_JournalCover.png" alt="ACS Cover" style="width:400px; height:auto;              border:1px solid #ccc;        /* add border */             border-radius:12px;           /* rounded corners */             box-shadow:0 4px 12px rgba(0,0,0,.15); /* drop shadow */      " /></p>
-
-<p><em>“Is it Fe=O? Fe-OH?” — 2020</em></p>
-
-<p>Cover art for my big dissertation publication. Thanks, MTG, for being such a supportive advisor and encouraging me to see the art in my work.</p>
-
-  </div>
-
-</article>
 
     </div>
 
