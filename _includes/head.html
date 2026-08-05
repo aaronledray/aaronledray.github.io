@@ -76,3 +76,8 @@
     }
   </style>
 <link rel="stylesheet" href="/assets/css/style.css?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
+
+{% if jekyll.environment == "production" %}
+<script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{% endif %}

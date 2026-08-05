@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  aaronledray
+goatcounter_code: aaronledray # <- replace with your actual GoatCounter site code from signup
 
 # Build settings
 theme: minima
