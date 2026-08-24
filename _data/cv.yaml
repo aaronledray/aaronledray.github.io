@@ -54,7 +54,7 @@ experience:
     highlights:
       - "Simulated O₂ binding across several hundred heme protein homologues; applied machine-learning voxel representations to predict enzyme reactivity and metal binding in designed structures. Presented at the Texas Advanced Computing Center User Meeting (2023)."
       - "Designed novel metallo-DNAzymes that mimic heme peroxidase enzymes."
-      - "Developed and characterized next-generation model systems for heme–copper oxidase, sulfite reductase (types A and D), and nitrogenase."
+      - "Developed and characterized next-generation model systems for heme–copper oxidase, sulfite reductase (4Fe4S-heme and heme-copper types), and nitrogenase."
       - "Engineered DNA-aptamer–based delivery systems for fluorescent cargo across blood–brain barrier model systems."
       - "Designed kinetic experiments to resolve competing pathways and extract rate behavior."
       - "Built Python-based workflows for processing, modeling, and comparing experimental datasets."
