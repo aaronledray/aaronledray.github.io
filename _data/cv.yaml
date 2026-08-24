@@ -88,6 +88,8 @@ skills:
       - Design and optimization of biochemical and cell-based assays
       - Fluorescence-based readouts for transport, uptake, and reaction systems
       - Signal optimization, reproducibility, and endpoint selection
+      - Plate-reader-based assays (fluorescence and UV/Vis) for high-throughput enzymatic activity screening
+      - Binding and thermodynamic assays (isothermal titration calorimetry, surface plasmon resonance)
 
   - category: Reaction Systems & Enzymology
     items:
@@ -100,6 +102,7 @@ skills:
       - Fluorescent cargo uptake and intracellular trafficking assays
       - Human cell lines and primary neurons
       - Quantitative fluorescence microscopy and image analysis
+      - Flow cytometry
 
   - category: Data Analysis & Modeling
     items:
@@ -118,6 +121,8 @@ skills:
       - Enzyme kinetics and mechanisms
       - Structural biology
       - Bioinorganic and metalloprotein chemistry
+      - Neutron crystallography and electron diffraction data analysis
+      - X-ray protein crystallography (crystallization and structure determination)
 
   - category: Spectroscopy
     items:
@@ -126,24 +131,54 @@ skills:
       - Resonance Raman spectroscopy
       - X-ray Absorption Spectroscopy (XAS), Extended X-ray Absorption Fine Structure (EXAFS)
       - Nuclear Resonance Vibrational Spectroscopy (NRVS)
+      - Electron Paramagnetic Resonance (EPR) spectroscopy (X-band, Q-band, W-band)
+      - Circular Dichroism (CD) spectroscopy
+      - "Synchrotron beamline data collection: XAS/EXAFS at SSRL; NRVS at APS (Argonne National Laboratory)"
+      - NMR spectroscopy (small-molecule/product characterization)
 
   - category: Molecular & Cell Biology
     items:
       - Molecular cloning and construct design
       - Protein expression and purification in bacterial and eukaryotic systems
+      - "Genetic code expansion: site-specific incorporation of non-canonical amino acids (e.g., 4-azido-phenyltyrosine)"
+      - Chromatographic protein purification (FPLC, HPLC, size-exclusion, affinity, ion-exchange)
+      - PCR and site-directed mutagenesis
+      - Gel electrophoresis (SDS-PAGE, agarose) and western blotting
+      - Mass spectrometry (MALDI-TOF) for protein purity and identity assessment
+
+  - category: Electrochemistry & Bioconjugation
+    items:
+      - Bioorthogonal click chemistry (azide–alkyne) for site-specific protein functionalization
+      - Protein immobilization on gold electrode surfaces via thiol linkers
+      - Cyclic voltammetry (CV), square-wave voltammetry (SWV), and electrochemical impedance spectroscopy (EIS)
+
+  - category: In Vivo & Animal Model Research
+    items:
+      - Live-animal behavioral assays in mouse models of neurodegenerative disease
+      - Intracranial and systemic injections and tissue harvesting (brain, muscle)
+      - Volumetric and neuronal branching analysis of neuromuscular junctions via confocal microscopy
+
+  - category: DNA Nanotechnology & Aptamer Engineering
+    items:
+      - Aptamer engineering and experimental design, including delivery and control constructs
+      - Development of fluorescent aptamer-based biosensors (e.g., for labile heme)
+      - DNA as a structural scaffold for metallocatalysis
 
   - category: Computational Chemistry & Molecular Modeling
     items:
       - Protein homology modeling and molecular docking
-      - Molecular dynamics simulations (free energy calculations, macromolecular interactions, active-site dynamics)
-      - Quantum chemistry and hybrid QM/MM methods
+      - Molecular dynamics simulations (GROMACS, AMBER; free energy calculations, macromolecular interactions, active-site dynamics)
+      - Quantum chemistry and hybrid QM/MM methods (Gaussian, ORCA, CP2K)
       - Protein design and modeling (Rosetta, RFdiffusion, ESMFold, AlphaFold)
+      - Molecular visualization and analysis (PyMOL, ChimeraX, VMD, Avogadro)
+      - Parallel/HPC computing for large-scale simulations
 
   - category: Bioinformatics & Data Science
     items:
       - Machine learning applied to protein structural data
       - Feature engineering, regression, and classification analyses
       - Machine-learning pipelines (scikit-learn, PyTorch, TensorFlow)
+      - Single-cell transcriptomic data analysis and visualization (R)
 
   - category: Scientific Visualization & Graphic Design
     items:
@@ -151,7 +186,31 @@ skills:
       - Custom plotting and interactive graphics (matplotlib, Plotly)
       - Vector illustration and layout for journals and presentations (Adobe Illustrator, InDesign)
 
+  - category: Scientific Writing & Communication
+    items:
+      - Manuscript preparation and peer-reviewed publication (12 co/first-authored papers)
+      - Dissertation and technical report writing
+      - LaTeX typesetting for manuscripts and technical documents
+
+  - category: Teaching & Mentoring
+    items:
+      - Guest lecturing at the graduate level (Bioinorganic Chemistry, P450 catalysis)
+
+  - category: Leadership & Organization Building
+    items:
+      - "Founding President, UCF Synthetic Biology Club (2013–2015)"
+      - "Founding Member, BioML Club, University of Texas at Austin (2022–2025)"
+      - "Vice President, American Society of Microbiology, UCF chapter (2012–2015)"
+
+  - category: AI-Assisted Research & Development
+    items:
+      - "AI research assistants (Claude, ChatGPT) for data analysis, coding, tooling development, and scientific writing, adopted since each was first released"
+      - "AI coding assistants integrated into development workflows (e.g., VS Code plugins such as Codex), since 2025"
+
 languages:
+  - name: Excel (VBA)
+    since: 2010
+    focus: Data organization and analysis, lab automation via macros
   - name: Python
     since: 2013
     focus: Scientific computing, data analysis, visualization
@@ -170,11 +229,20 @@ languages:
   - name: Ruby
     since: 2023
     focus: Basic exposure (Jekyll/GitHub Pages, creative computing)
+  - name: YAML
+    since: 2023
+    focus: Structured configuration and data files
 
 tooling:
   - name: Spyder IDE
     since: 2013
     focus: Scientific Python development and debugging
+  - name: Mathematica
+    since: 2015
+    focus: Symbolic math and occasional modeling
+  - name: Jupyter Notebooks
+    since: 2018
+    focus: Exploratory data analysis and prototyping (secondary to Spyder)
   - name: HPC systems
     since: 2016
     focus: Cluster-based compute workflows and job scheduling
@@ -184,6 +252,29 @@ tooling:
   - name: VS Code
     since: 2021
     focus: Multi-language development and project tooling
+  - name: Cofactor Coordination Network Analysis Tools
+    since: 2022
+    focus: Custom Python tooling for protein active-site coordination network analysis, with interactive HTML output for review and sharing
+  - name: OxyTherm Workup Tools
+    since: 2022
+    focus: Custom Python tooling for oxygen/sulfite reduction reaction workup and screening, with HTML output
+  - name: Journal Club Publication Watcher
+    since: 2022
+    focus: Automated literature-tracking tool for surfacing new publications relevant to ongoing research
+  - name: Git / GitHub
+    since: 2022
+    focus: Version control for research code and collaborative projects
+  - name: GitHub Actions / CI-CD
+    since: 2023
+    focus: Automated build/deploy pipelines for static site hosting (GitHub Pages)
+  - name: LaTeX
+    since: 2024
+    focus: Typesetting manuscripts, CVs, and technical documents
+
+certifications:
+  - "Radiation Safety Training"
+  - "Biosafety Training"
+  - "IACUC Animal Handling Certification"
 
 accomplishments:
   - "Cover art for *Journal of the American Chemical Society*, Volume 142, Issue 48 (2020)"
@@ -208,7 +299,8 @@ organizations:
     role: Founding Member, President
     years: 2013–2015
 
-
-
+service:
+  - "[Faculty Opinions](https://facultyopinions.com/prime/thefaculty/member/1162787), London, GB — Associate Faculty Member (invited position), 2022–present"
+  - "Manuscript reviewer, at PI's invitation, for *Nature Catalysis* and *Bioconjugate Chemistry*"
 
 

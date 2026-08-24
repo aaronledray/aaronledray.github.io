@@ -89,6 +89,17 @@ permalink: /cv/
 
 ---
 
+## Certifications & Training
+{% if site.data.cv.certifications %}
+<ul>
+{% for c in site.data.cv.certifications %}
+  <li>{{ c }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+---
+
 ## Accomplishments
 {% if site.data.cv.accomplishments %}
 <ul>
@@ -125,6 +136,17 @@ permalink: /cv/
 <ul>
 {% for item in site.data.cv.conferences_and_presentations %}
   <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+---
+
+## Professional Service
+{% if site.data.cv.service %}
+<ul>
+{% for s in site.data.cv.service %}
+  <li>{{ s | markdownify | remove: '<p>' | remove: '</p>' }}</li>
 {% endfor %}
 </ul>
 {% endif %}
