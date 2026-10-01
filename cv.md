@@ -11,7 +11,7 @@ permalink: /cv/
 {{ site.data.cv.location }}  
 {% if site.data.cv.phone %}{{ site.data.cv.phone }} • {% endif -%}
 [{{ site.data.cv.email }}](mailto:{{ site.data.cv.email }}){% if site.data.cv.alt_email %} • [{{ site.data.cv.alt_email }}](mailto:{{ site.data.cv.alt_email }}){% endif %} •
-[Website]({{ site.data.cv.website }}){% if site.data.cv.linkedin %} • [LinkedIn]({{ site.data.cv.linkedin }}){% endif %}{% if site.data.cv.orcid %} • [ORCID]({{ site.data.cv.orcid }}){% endif %}
+[Website]({{ site.data.cv.website }}){% if site.data.cv.linkedin %} • [LinkedIn]({{ site.data.cv.linkedin }}){% endif %}{% if site.data.cv.orcid %} • [ORCID](https://orcid.org/{{ site.data.cv.orcid }}){% endif %}
 
 ---
 
