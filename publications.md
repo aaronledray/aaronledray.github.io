@@ -1,12 +1,13 @@
 ---
 layout: page
 title: "Publications"
+description: >-
+  Publications by Aaron P. Ledray on metalloprotein chemistry, enzyme design, spectroscopy, and bioinspired catalysis.
 permalink: /publications/
 ---
 
+# Publications
 
-
-<h1 style="text-align: center;">Publications</h1>
 <hr>
 
 {% for pub in site.data.publications %}

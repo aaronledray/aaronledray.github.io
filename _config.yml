@@ -18,20 +18,30 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: APL's site
+title: Aaron P. Ledray
+tagline: Metallobiochemistry, enzyme design, and research software.
+author: Aaron P. Ledray
 email: aaronledray@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  APL's place for quasi-academic writing, projects, and art.
+  I am a metallobiochemist working at the experiment–theory–simulation interface. I study enzyme design, metal-centered reactivity, and research software.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aaronledray.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  aaronledray
 goatcounter_code: aaronledray # <- replace with your actual GoatCounter site code from signup
+
+social:
+  name: Aaron P. Ledray
+  links:
+    - https://github.com/aaronledray
+    - https://www.linkedin.com/in/aaronledray
+    - https://orcid.org/0000-0002-1829-1235
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Exclude from processing.
@@ -53,3 +63,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Temporarily hide the portfolio and its artwork from the generated site while
+# preserving the source files in the repository for a future return.
+exclude:
+  - portfolio.md
+  - assets/images/art1.png
+  - assets/images/ACS_JournalCover.png
+  - tools/index.md
+  - InteractiveCoordinationFingerprint.html
+  - InteractiveCoordinationFingerprint_1apx.html
+  - InteractiveCoordinationFingerprint_2gep.html
+  - assets/videos/20260708_heme-copper-oxidase_heatmap.mp4
+  - assets/videos/20260708_heme-copper-oxidase_heatmap_playable.mp4
+  - assets/videos/20260708_heme-copper-oxidase_heatmap_websafe.mp4
+  - lighthouse_results/

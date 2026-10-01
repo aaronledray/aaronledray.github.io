@@ -14,14 +14,14 @@
     </script>
 
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
     {% include head.html %}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     {% include nav.html %}
-    <div class="content">
+    <main id="main-content" class="content">
       {{ content }}
-    </div>
+    </main>
 
     <!-- Toggle + button state sync -->
     <script>

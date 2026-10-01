@@ -1,16 +1,20 @@
 ---
 layout: default
 title: Posts
+description: >-
+  Research notes and explanations about metallobiochemistry, enzyme design, computational analysis, and research software.
 permalink: /blog/
 ---
-<h1 style="text-align: center;">Posts</h1>
+
+# Posts
+
 <hr>
 
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>— {{ post.date | date: "%b %d, %Y" }}</small>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%b %d, %Y" }}</small>
     </li>
   {% endfor %}
 </ul>

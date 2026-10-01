@@ -20,6 +20,18 @@
   
   /* Apply variables site-wide */
   html, body { background: var(--bg); color: var(--fg); }
+
+  body {
+    font-family: Garamond, "EB Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link);
+  }
   
   /* Headers / titles */
   h1, h2, h3, h4, h5, h6 { color: var(--fg); }
@@ -31,6 +43,7 @@
   .site-header, .site-nav, nav { 
     background: var(--nav-bg); 
     border-bottom: 1px solid var(--border); 
+    padding: 1em;
   }
   .site-footer { 
     background: var(--nav-bg); 
@@ -43,6 +56,12 @@
     background: var(--bg);
     color: var(--fg);
     border-color: var(--border);
+  }
+
+  .content {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
   }
   
   /* UI */
@@ -59,6 +78,83 @@
     border-radius: 6px;
     cursor: pointer;
   }
+
+/* Accessibility and responsive navigation */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.75rem;
+  z-index: 1000;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 2px solid var(--link);
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+}
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+  nav a {
+    margin-right: 0;
+    padding: 0.2rem 0;
+    color: var(--nav-text, var(--link));
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+nav a:focus-visible,
+#themeToggle:focus-visible,
+.skip-link:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 3px;
+}
+
+  .theme-toggle {
+    float: none;
+    margin-left: auto;
+    font-size: 0.9em;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+  }
+
+@media (max-width: 600px) {
+  nav {
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+    order: -1;
+    width: 100%;
+  }
+}
 
 /* Portfolio art cards */
 .art-figure {

@@ -1,81 +1,8 @@
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --link-color: #0066cc;
-      --nav-bg: #f8f8f8;
-      --nav-text: #1a1a1a;
-    }
-  
-    html[data-theme="dark"] {
-      --bg-color: #111111;
-      --text-color: #e5e5e5;
-      --link-color: #66aaff;
-      --nav-bg: #1f1f1f;
-      --nav-text: #e5e5e5;
-    }
-  
+{% seo %}
 
-
-    
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: "Garamond", "EB Garamond", Georgia, serif;
-      font-size: 18px;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-    }
-  
-    a {
-      color: var(--link-color);
-    }
-  
-    nav {
-      background: var(--nav-bg);
-      padding: 1em;
-      border-bottom: 1px solid #ccc;
-    }
-  
-    nav a {
-      color: var(--nav-text);
-      text-decoration: none;
-      margin-right: 1em;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: bold;
-    }
-  
-    nav a:hover {
-      text-decoration: underline;
-    }
-  
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
-    }
-  
-    .theme-toggle {
-      float: right;
-      font-size: 0.9em;
-      cursor: pointer;
-      background: none;
-      border: 1px solid var(--nav-text);
-      padding: 0.3em 0.6em;
-      border-radius: 4px;
-      color: var(--nav-text);
-    }
-  
-    .theme-toggle:hover {
-      background-color: var(--link-color);
-      color: #fff;
-    }
-  </style>
-<link rel="stylesheet" href="/assets/css/style.css?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 
 {% if jekyll.environment == "production" %}
 <script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count"

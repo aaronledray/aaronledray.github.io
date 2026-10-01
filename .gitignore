@@ -6,7 +6,13 @@ vendor
 
 .DS_Store
 
+# Local agent settings and development notes; do not publish
+/.claude/
+/0_notes.md
+
 # Large source encodes for the cytochrome c oxidase post
 assets/videos/20260708_heme-copper-oxidase_heatmap.mp4
 assets/videos/20260708_heme-copper-oxidase_heatmap_playable.mp4
-assets/videos/20260708_heme-copper-oxidase_heatmap.web.mp4
+
+# Private local planning notes; do not publish
+/.private/

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: "Curriculum Vitae"
+description: >-
+  My curriculum vitae, including research experience, education, publications, skills, and professional service.
 permalink: /cv/
 ---
 
@@ -20,7 +22,7 @@ permalink: /cv/
 
 ## Education
 {% for edu in site.data.cv.education %}
-- **{{ edu.degree }}**, {{ edu.institution }} — {{ edu.location }} ({{ edu.year }})
+- **{{ edu.degree }}**, {{ edu.institution }}, {{ edu.location }} ({{ edu.year }})
   {% if edu.thesis %}<br><em>Thesis:</em> {{ edu.thesis }}{% endif %}
 {% endfor %}
 
@@ -36,7 +38,7 @@ permalink: /cv/
 
 ## Experience
 {% for role in site.data.cv.experience %}
-- **{{ role.title }}**, {{ role.institution }} — {{ role.location }} ({{ role.years }})
+- **{{ role.title }}**, {{ role.institution }}, {{ role.location }} ({{ role.years }})
   {% if role.lab %}<br><em>{{ role.lab }}</em>{% endif %}
   {% if role.highlights %}
   <ul>
@@ -68,7 +70,7 @@ permalink: /cv/
   <li>
     <strong>{{ lang.name }}</strong>
     {% if lang.since %}(since {{ lang.since }}){% endif %}
-    {% if lang.focus %} — {{ lang.focus }}{% endif %}
+    {% if lang.focus %}, {{ lang.focus }}{% endif %}
   </li>
 {% endfor %}
 </ul>
@@ -81,7 +83,7 @@ permalink: /cv/
   <li>
     <strong>{{ tool.name }}</strong>
     {% if tool.since %}(since {{ tool.since }}){% endif %}
-    {% if tool.focus %} — {{ tool.focus }}{% endif %}
+    {% if tool.focus %}, {{ tool.focus }}{% endif %}
   </li>
 {% endfor %}
 </ul>
@@ -116,7 +118,7 @@ permalink: /cv/
 <ul>
 {% for org in site.data.cv.organizations %}
   <li>
-    <strong>{{ org.name }}</strong>{% if org.role %} — {{ org.role }}{% endif %}{% if org.years %} ({{ org.years }}){% endif %}
+    <strong>{{ org.name }}</strong>{% if org.role %}, {{ org.role }}{% endif %}{% if org.years %} ({{ org.years }}){% endif %}
     {% if org.notes %}
     <ul>
       {% for n in org.notes %}
@@ -153,4 +155,4 @@ permalink: /cv/
 
 ---
 
-[View Publications](/publications/)
+[View Publications]({{ '/publications/' | relative_url }})
