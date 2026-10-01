@@ -26,7 +26,7 @@ We chose APX because its distal heme pocket provided a useful scaffold for intro
 <figure class="art-figure art-center">
   <picture>
     <source srcset="{{ '/assets/images/APX_Mutation_Sites.webp' | relative_url }}" type="image/webp">
-    <img class="art-img art-shadow" src="{{ '/assets/images/APX_Mutation_Sites.png' | relative_url }}" alt="Native APX heme pocket showing His42 and Leu131, the positions used in the engineered designs" width="534" height="544" loading="lazy" decoding="async">
+    <img class="art-img art-shadow" src="{{ '/assets/images/APX_Mutation_Sites.png' | relative_url }}" alt="Native APX heme pocket showing His42 and Leu131, the positions used in the engineered designs" width="427" height="435" loading="lazy" decoding="async">
   </picture>
   <figcaption class="art-caption">Native APX heme pocket showing His42 and Leu131, the positions later altered or tested in the engineered designs.</figcaption>
 </figure>
