@@ -6,7 +6,7 @@ description: >-
 date: 2026-10-01 09:00:00 -0500
 permalink: /posts/cub-vs-cusir-apx/
 categories: cofactors enzymes protein-design
-published: false
+published: true
 ---
 
 In a recently published study, I compared two copper sites that sit beside heme but support different chemistry: the Cu<sub>B</sub> site from heme–copper oxidases and the Cu<sub>SiR</sub> site from sulfite reductase type A. The central challenge was that the native enzymes differ in much more than their copper sites. They have different protein scaffolds, surrounding residues, access channels, and heme environments.
