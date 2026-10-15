@@ -14,7 +14,7 @@ permalink: /news/
   {% for item in news_items %}
     <li class="news-item">
       <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %-d, %Y" }}</time>
-      <p><strong>{{ item.title | escape }}</strong>{% if item.text %} — {{ item.text | escape }}{% endif %}</p>
+      <p><strong>{{ item.title | escape }}</strong>{% if item.text %}: {{ item.text | escape }}{% endif %}</p>
       {% if item.link %}<p><a href="{{ item.link | escape }}">{{ item.link_label | default: "Read more" | escape }}</a></p>{% endif %}
     </li>
   {% endfor %}

@@ -26,7 +26,7 @@ I am interested in how protein environments control metal-centered reactivity, a
   {% for item in news_items limit:3 %}
     <li class="news-item">
       <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %-d, %Y" }}</time>
-      <p><strong>{{ item.title | escape }}</strong>{% if item.text %} — {{ item.text | escape }}{% endif %}{% if item.link %} <a href="{{ item.link | escape }}">{{ item.link_label | default: "More" | escape }}</a>{% endif %}</p>
+      <p><strong>{{ item.title | escape }}</strong>{% if item.text %}: {{ item.text | escape }}{% endif %}{% if item.link %} <a href="{{ item.link | escape }}">{{ item.link_label | default: "More" | escape }}</a>{% endif %}</p>
     </li>
   {% endfor %}
 </ul>
