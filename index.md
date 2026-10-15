@@ -15,7 +15,25 @@ I am interested in how protein environments control metal-centered reactivity, a
 
 - [Research and experience]({{ '/about/' | relative_url }})
 - [Publications]({{ '/publications/' | relative_url }})
+- [News]({{ '/news/' | relative_url }})
 - [Posts]({{ '/blog/' | relative_url }})
+
+## Recent news
+
+{% assign news_items = site.data.news | sort: 'date' | reverse %}
+{% if news_items.size > 0 %}
+<ul class="news-list">
+  {% for item in news_items limit:3 %}
+    <li class="news-item">
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %-d, %Y" }}</time>
+      <p><strong>{{ item.title | escape }}</strong>{% if item.text %} — {{ item.text | escape }}{% endif %}{% if item.link %} <a href="{{ item.link | escape }}">{{ item.link_label | default: "More" | escape }}</a>{% endif %}</p>
+    </li>
+  {% endfor %}
+</ul>
+<p><a href="{{ '/news/' | relative_url }}">All news</a></p>
+{% else %}
+<p>No news updates yet.</p>
+{% endif %}
 
 ## Recent posts
 
