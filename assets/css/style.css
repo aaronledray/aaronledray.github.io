@@ -188,4 +188,23 @@ nav a:focus-visible,
   opacity: 0.8;
   margin-top: 0.4rem;
 }
+
+.news-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.news-item {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
+
+.news-item time {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.news-item p {
+  margin: 0.25rem 0 0;
+}
   

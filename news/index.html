@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Boot theme BEFORE CSS to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved ? saved : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>News | Aaron P. Ledray</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="News" />
+<meta name="author" content="Aaron P. Ledray" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Short research, publication, and professional updates from Aaron P. Ledray." />
+<meta property="og:description" content="Short research, publication, and professional updates from Aaron P. Ledray." />
+<link rel="canonical" href="https://aaronledray.github.io/news/" />
+<meta property="og:url" content="https://aaronledray.github.io/news/" />
+<meta property="og:site_name" content="Aaron P. Ledray" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="News" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Aaron P. Ledray"},"description":"Short research, publication, and professional updates from Aaron P. Ledray.","headline":"News","url":"https://aaronledray.github.io/news/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="/assets/css/style.css?v=1792025794">
+
+
+<script data-goatcounter="https://aaronledray.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+<nav aria-label="Primary navigation">
+    <button id="themeToggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle color theme">🌓 Dark/Light Toggle</button>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/cv/">CV</a>
+      <a href="/publications/">Publications</a>
+      <a href="/news/" aria-current="page">News</a>
+      <a href="/blog/">Posts</a>
+      <a href="/contact/">Contact</a>
+    </div>
+</nav>
+
+    <main id="main-content" class="content">
+      <h1 id="news">News</h1>
+
+<ul class="news-list">
+  
+    <li class="news-item">
+      <time datetime="2026-10-14">October 14, 2026</time>
+      <p><strong>Peroxidase review accepted for publication</strong> — Our 30-year retrospective on peroxidases and heme enzyme structure–function relationships has been accepted and is ready for publication.</p>
+      
+    </li>
+  
+</ul>
+
+
+
+    </main>
+
+    <!-- Toggle + button state sync -->
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+          btn.setAttribute('aria-pressed', theme === 'dark');
+          btn.textContent = theme === 'dark' ? 'Dark mode' : 'Light mode';
+        }
+      }
+
+      function toggleTheme() {
+        var current = document.documentElement.getAttribute('data-theme') || 'light';
+        setTheme(current === 'dark' ? 'light' : 'dark');
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        var current = document.documentElement.getAttribute('data-theme') || 'light';
+        btn.setAttribute('aria-pressed', current === 'dark');
+        btn.textContent = current === 'dark' ? 'Dark mode' : 'Light mode';
+      });
+    </script>
+  </body>
+</html>

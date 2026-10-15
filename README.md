@@ -22,6 +22,7 @@ The generated site is written to `_site/`, which is ignored by Git.
 ## Updating content
 
 - Add or revise blog posts in `_posts/`. Posts need Jekyll front matter, including `layout`, `title`, and `date`.
+- Add short announcements to `_data/news.yml` with a `date` (`YYYY-MM-DD`), `title`, optional `text`, and optional `link` / `link_label`. News appears on the News page and in the homepage's recent-news list.
 - Update publications in `_data/publications.yaml`.
 - Update CV and profile links in `_data/cv.yaml`.
 - Update site-wide settings and exclusions in `_config.yml`.
